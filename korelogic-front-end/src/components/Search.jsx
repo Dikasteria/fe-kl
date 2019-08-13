@@ -6,32 +6,8 @@ class Search extends Component {
   };
 
   render() {
-    return (
-      <form className="search" onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search for a Topic"
-          value={this.state.search}
-          onChange={this.handleChange}
-        />
-        <button type="submit">Search</button>
-      </form>
-    );
+    return <div>Filter By Food Here</div>;
   }
-  handleChange = event => {
-    this.setState({
-      search: event.target.value
-    });
-  };
-  handleSubmit = event => {
-    const { search } = this.state;
-    const { updateSearch } = this.props;
-    event.preventDefault();
-    updateSearch(search);
-    this.setState({
-      search: ""
-    });
-  };
 }
 
 export default Search;
