@@ -1,24 +1,34 @@
 import "./App.css";
 import React, { Component } from "react";
 import Heading from "./components/Heading";
-import Search from "./components/Search";
+import Filter from "./components/Filter";
 import Restaurants from "./components/Restaurants";
-import data from "../src/restaurants.json";
+import data from "../src/restaurants";
 
 class App extends Component {
   state = {
     restaurants: [],
-    search: "indian"
+    filter: "indian"
   };
   render() {
     const { restaurants, search } = this.state;
     return (
       <div className="App">
         <Heading search={search} />
-        <Search updateSearch={this.updateSearch} />
+        <Filter updateSearch={this.updateSearch} />
         <Restaurants restaurants={restaurants} />
       </div>
     );
   }
+  componentDidMount = () => {
+    this.fetchRestaurants().then(restaurants => {
+      this.setState({ restaurants });
+    });
+  };
+  fetchRestaurants = async () => {
+    const { filter } = this.state;
+    let restData = await data;
+    return restData;
+  };
 }
 export default App;
