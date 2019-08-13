@@ -8,7 +8,12 @@ const Restaurants = ({ restaurants }) => {
         return (
           <li key={restaurant.id} className="restaurant">
             <h2>{restaurant.name}</h2>
-            <p>Cuisine </p>
+            <p>Cuisine:</p>
+            <p>
+              {restaurant.cuisine.map(cuisine => {
+                return cuisine + " ";
+              })}{" "}
+            </p>
           </li>
         );
       })}

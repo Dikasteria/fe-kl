@@ -1,9 +1,9 @@
 import React from "react";
 
-const Heading = ({ search }) => {
+const Heading = ({ filter }) => {
   return (
     <h1 className="heading">
-      Restaurants serving <span>{search} food</span>
+      Restaurants serving <span>{filter} food</span>
     </h1>
   );
 };

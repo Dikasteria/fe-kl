@@ -11,10 +11,10 @@ class App extends Component {
     filter: "indian"
   };
   render() {
-    const { restaurants, search } = this.state;
+    const { restaurants, filter } = this.state;
     return (
       <div className="App">
-        <Heading search={search} />
+        <Heading filter={filter} />
         <Filter updateSearch={this.updateSearch} />
         <Restaurants restaurants={restaurants} />
       </div>
