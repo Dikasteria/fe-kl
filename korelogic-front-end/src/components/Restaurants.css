@@ -1,0 +1,12 @@
+.Restaurants {
+  grid-area: Restaurants;
+}
+
+.Name {
+  justify-content: center;
+}
+
+.restaurant {
+  justify-content: center;
+  text-align: center;
+}
