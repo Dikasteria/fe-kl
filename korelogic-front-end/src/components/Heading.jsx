@@ -1,10 +1,13 @@
 import React from "react";
+import "./Heading.css";
 
 const Heading = ({ filter }) => {
   return (
-    <h1 className="heading">
-      Restaurants serving <span>{filter} food</span>
-    </h1>
+    <div className="Heading">
+      <h1 className="title">
+        Restaurants serving <span>{filter} food</span>
+      </h1>
+    </div>
   );
 };
 

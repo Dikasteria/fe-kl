@@ -1,0 +1,16 @@
+.Filter {
+  grid-area: Filter;
+  width: 100%;
+  background: whitesmoke;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+.sort_button {
+  justify-content: space-evenly;
+}
+
+.sort_button:hover {
+  box-shadow: 2px 2px grey;
+}

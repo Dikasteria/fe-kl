@@ -1,0 +1,11 @@
+.Heading {
+  grid-area: Heading;
+}
+
+.title {
+  color: black;
+  text-align: center;
+  margin: 100px;
+  font-size: 5vh;
+  text-shadow: 2px 2px grey;
+}
